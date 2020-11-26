@@ -11,8 +11,7 @@ namespace Proy_A_Rent.Controllers
 {
     public class IndexController : Controller
     {
-        private readonly ILogger<IndexController> _logger;
-
+        
         public IActionResult Index()
         {
             return View();
