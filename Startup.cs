@@ -50,7 +50,7 @@ namespace Proy_A_Rent
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Home}/{id?}");
             });
         }
     }
