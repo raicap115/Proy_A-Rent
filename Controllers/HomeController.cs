@@ -22,7 +22,10 @@ namespace Proy_A_Rent.Controllers
         {
             return View();
         }
-
+        public IActionResult SingUp()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
