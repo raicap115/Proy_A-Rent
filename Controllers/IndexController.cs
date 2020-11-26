@@ -9,19 +9,30 @@ using Proy_A_Rent.Models;
 
 namespace Proy_A_Rent.Controllers
 {
-    public class HomeController : Controller
+    public class IndexController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<IndexController> _logger;
 
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Bookings()
         {
             return View();
         }
+
+        public IActionResult Service()
+        {
+            return View();
+        }
+
+        public IActionResult Nosotros()
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
