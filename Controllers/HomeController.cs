@@ -26,6 +26,10 @@ namespace Proy_A_Rent.Controllers
         {
             return View();
         }
+        public IActionResult ContSopr()
+        {
+            return View();
+        }
         public IActionResult SingUp()
         {
             return View();
