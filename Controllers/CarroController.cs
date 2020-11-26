@@ -21,15 +21,21 @@ namespace Proy_A_Rent.Controllers
             _context = context;
         }    
 
+        public IActionResult Carritos()
+        {
+            var contactos = _context.Carros.Where(x => x.Marca != null).ToList();
 
+            return View(contactos);
+        }
 
-        public IActionResult Insertar()
+        
+        public IActionResult MB()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Insertar(MB c)
+        public IActionResult MB(MB c)
         {
             if (ModelState.IsValid) {
 
@@ -37,21 +43,35 @@ namespace Proy_A_Rent.Controllers
                 _context.SaveChanges();
 
                 // Guardar en BD
-                return RedirectToAction("Index");
+                return RedirectToAction("Carritos");
             }
 
             return View(c);
         }
 
 
-        public IActionResult MB()
-        {
-            return View();
-        }
         public IActionResult BMW()
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult BMW(MB d)
+        {
+            if (ModelState.IsValid) {
+
+                _context.Add(d);
+                _context.SaveChanges();
+
+                // Guardar en BD
+                return RedirectToAction("Carritos");
+            }
+
+            return View(d);
+        }
+
+        
+
         public IActionResult Bentley()
         {
             return View();
@@ -59,6 +79,11 @@ namespace Proy_A_Rent.Controllers
         public IActionResult Porsche()
         {
             return View();
+        }
+
+        public IActionResult Consultar()
+        {
+           return View(); 
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

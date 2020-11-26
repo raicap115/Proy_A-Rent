@@ -2,13 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Proy_A_Rent.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Proy_A_Rent.Data;
 
 namespace Proy_A_Rent
 {
@@ -25,6 +26,7 @@ namespace Proy_A_Rent
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<WebAppContext>(dco => dco.UseInMemoryDatabase("WebAppBD"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

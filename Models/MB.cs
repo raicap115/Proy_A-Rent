@@ -7,6 +7,7 @@ namespace Proy_A_Rent.Models
         public int Id { get; set; }
         [Required]
         public string Nombre { get; set; }
-        public string Mensaje { get; set; }
+        public string Marca { get; set; }
+        public string Cantidad { get; set; }
     }
 }
