@@ -18,6 +18,10 @@ namespace Proy_A_Rent.Controllers
             return View();
         }
 
+        public IActionResult Login()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
