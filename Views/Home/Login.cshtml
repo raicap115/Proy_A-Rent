@@ -1,6 +1,9 @@
 @{
     ViewData["Title"] = "Login";
 }
+@{
+    Layout="_Layout_Home";
+}
 
 <body style="background-color: #eb5757;">
     <div style="margin-top: 150px;">
@@ -20,12 +23,7 @@
       <label for="password" class="float-label">password</label>
     </div>
     <div id="form-login-remember" class="form-group">
-      <div class="checkbox checkbox-default">
-          <input id="remember" type="checkbox" value="yes" alt="Remember me" class="">
-          <label for="remember">Remember me</label>
-      </div>
-
-            <button class="btn btn-secondary" asp-action="Login">Ingresar</button>
+        <button class="btn btn-secondary" asp-action="Login">Ingresar</button>
         </div>
         <div style="text-align: center;">
             <a asp-action="Register">Abrir una nueva cuenta</a>
