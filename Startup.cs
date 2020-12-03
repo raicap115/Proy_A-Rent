@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Proy_A_Rent.Data;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
 
 namespace Proy_A_Rent
 {
@@ -24,6 +26,7 @@ namespace Proy_A_Rent
         public void ConfigureServices(IServiceCollection services)
         {
          services.AddControllersWithViews();
+         services.AddDbContext<ARentContext>(dco => dco.UseNpgsql(Configuration.GetConnectionString("postgress-db")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
