@@ -11,6 +11,7 @@ FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 WORKDIR /app
 COPY --from=build-env /app/out .
 
-ENV APP_NET_CORE Proy_A_Rent.ddl
+#nombre de tu app busca en bin\Release\netcore3.1\myapp.exe
+ENV APP_NET_CORE Proy_A-Rent.dll
 
 CMD ASPNETCORE_URLS=http://*:$PORT dotnet $APP_NET_CORE
