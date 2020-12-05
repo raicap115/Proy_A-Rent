@@ -221,72 +221,91 @@ namespace Proy_A_Rent.Data.Migrations
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnName("id")
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<int>("cant")
+                        .HasColumnName("cant")
                         .HasColumnType("integer");
 
                     b.Property<string>("marca")
+                        .HasColumnName("marca")
                         .HasColumnType("text");
 
                     b.Property<string>("modelo")
+                        .HasColumnName("modelo")
                         .HasColumnType("text");
 
                     b.HasKey("id");
 
-                    b.ToTable("Autos");
+                    b.ToTable("t_auto)");
                 });
 
             modelBuilder.Entity("Proy_A_Rent.Models.Bookings", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnName("id")
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("fecha_dev")
+                        .HasColumnName("fecha_dev")
                         .HasColumnType("text");
 
                     b.Property<string>("fecha_rec")
+                        .HasColumnName("fecha_rec")
+                        .HasColumnType("text");
+
+                    b.Property<string>("id_usuario")
+                        .HasColumnName("id_usuario")
                         .HasColumnType("text");
 
                     b.Property<string>("modelo")
+                        .HasColumnName("modelo")
                         .HasColumnType("text");
 
                     b.HasKey("id");
 
-                    b.ToTable("Bookings");
+                    b.ToTable("t_bookings)");
                 });
 
             modelBuilder.Entity("Proy_A_Rent.Models.Usuario", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnName("id")
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("apellido")
+                        .HasColumnName("apellido")
                         .HasColumnType("text");
 
                     b.Property<string>("celular")
+                        .HasColumnName("celular")
                         .HasColumnType("text");
 
                     b.Property<string>("email")
+                        .HasColumnName("email")
                         .HasColumnType("text");
 
                     b.Property<char>("genero")
+                        .HasColumnName("genero")
                         .HasColumnType("character(1)");
 
                     b.Property<string>("nombre")
+                        .HasColumnName("nombre")
                         .HasColumnType("text");
 
                     b.Property<string>("password")
+                        .HasColumnName("password")
                         .HasColumnType("text");
 
                     b.HasKey("id");
 
-                    b.ToTable("Usuarios");
+                    b.ToTable("t_usuario");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

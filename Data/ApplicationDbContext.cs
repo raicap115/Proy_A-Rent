@@ -15,6 +15,7 @@ namespace Proy_A_Rent.Data
 
         public DbSet<Bookings> Bookings { get; set; }
 
+
         public ApplicationDbContext(DbContextOptions dco) : base(dco) {
 
         }
