@@ -6,71 +6,103 @@
     <h2 style="text-align: center;">BMW</h2>
 </div>
 
-<div class="container" style="margin-top: 25px;">
-    <form action="" method="post">
-    <table>        
+<div class="container" style="margin-top: 25px; padding-bottom: 41px;">
+    <form action="" method="post">     
        @foreach (var auto in Model)
        {
-        @if (@auto.id==201)
-        {
-            <tr>
-                <th colspan="2" style="text-align: center;">@auto.modelo</th>
-            </tr> 
-            <tr>
-                <td>
-                    <img src="~/images/bmw_serie1.jpg" width="216" height="115" style="margin-bottom: 30px;">
-                </td>
-                <td>
-                    <button class="btn btn-primary" style="margin-left: 18px;">Consultar</button>
-                </td>
-            </tr>             
+            @if (@auto.id==201)
+            {
+            <table style="margin-bottom: 25px;">
+                    <thead>
+                        <tr>
+                            <th colspan="2" style="text-align: center;">@auto.modelo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="~/images/bmw_serie1.jpg" width="216" height="115">
+                            </td>
+                            <td>
+                                <button class="btn btn-primary" style="margin-left: 15px;">Consultar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>             
         }
         @if (@auto.id==202)
         {
-            <tr>
-                <th colspan="2" style="text-align: center;">@auto.modelo</th>
-            </tr> 
-            <tr>
-                <td>
-                    <img src="~/images/bmw_serie2.jpeg" width="216" height="115" style="margin-bottom: 30px;">
-                </td>
-                <td>
-                    <button class="btn btn-primary" style="margin-left: 18px;">Consultar</button>
-                </td>
-            </tr>             
+            <table style="margin-bottom: 25px;">
+                    <thead>
+                        <tr>
+                            <th colspan="2" style="text-align: center;">@auto.modelo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="~/images/bmw_serie2.jpeg" width="216" height="115">
+                            </td>
+                            <td>
+                                <button class="btn btn-primary" style="margin-left: 15px;">Consultar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>             
         }
         @if (@auto.id==203)
         {
-            <tr>
-                <th colspan="2" style="text-align: center;">@auto.modelo</th>
-            </tr> 
-            <tr>
-                <td>
-                    <img src="~/images/bmw_x6m.jpg" width="216" height="115" style="margin-bottom: 30px;">
-                </td>
-                <td>
-                    <button class="btn btn-primary" style="margin-left: 18px;">Consultar</button>
-                </td>
-            </tr>             
+            <table style="margin-bottom: 25px;">
+                    <thead>
+                        <tr>
+                            <th colspan="2" style="text-align: center;">@auto.modelo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="~/images/bmw_x6m.jpg" width="216" height="115">
+                            </td>
+                            <td>
+                                <button class="btn btn-primary" style="margin-left: 15px;">Consultar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>             
         }
         @if (@auto.id==204)
         {
-            <tr>
-                <th colspan="2" style="text-align: center;">@auto.modelo</th>
-            </tr> 
-            <tr>
-                <td>
-                    <img src="~/images/bmw_m4cs.jpg" width="216" height="115">
-                </td>
-                <td>
-                    <button class="btn btn-primary" style="margin-left: 18px;">Consultar</button>
-                </td>
-            </tr>             
+            <table style="margin-bottom: 25px;">
+                    <thead>
+                        <tr>
+                            <th colspan="2" style="text-align: center;">@auto.modelo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="~/images/bmw_m4cs.jpg" width="216" height="115">
+                            </td>
+                            <td>
+                                <button class="btn btn-primary" style="margin-left: 15px;">Consultar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>             
         }          
-       }        
-        
-
-    </table>
+       }
     </form>
-</div>  
-<br><br>
+</div>
+<div>
+    <div class="row" style="margin-bottom: 10px; padding-left: 85px;">
+    <div class="col-xs-4" style="padding-left: 125px;"><a href="https://www.facebook.com/angieortiz.avalos%22%3E"><img src="~/images/fb_logo.png" width="25" height="25"/></a></div>
+    <div class="col-xs-4" style="padding-left: 25px;"><a href="https://www.instagram.com/angieortiz_a/%22%3E"><img src="~/images/ig_logo.png" width="25" height="25"/></a></div>
+    <div class="col-xs-4" style="padding-left: 25px;"><a href="https://mobile.twitter.com/?lang=es"><img src="~/images/twitter.jpg" width="25" height="25"/></a></div>
+</div>
+
+<div class="row" style="padding-top:10px; background-color: #161515;">
+    <div class="col-xs-3" style="padding-left: 20px;"><img src="~/images/phone.png"/></div>
+    <div class="col-xs-3" style="margin-top: 1px;"><p style="color: #898989;">+51 922 653 075</p></div>
+    <div class="col-xs-3"style="padding-left: 56px;"><img src="~/images/mail.png" width="25" height="25"/></div>
+    <div class="col-xs-3"style="padding-rigth: 15px; margin-left: 2px;"><p style="color: #898989;">support@arent.pe</p></div>
+</div>
