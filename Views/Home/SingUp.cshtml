@@ -19,40 +19,40 @@
           <h4 style="text-align: center; margin-top: 95px;">Regístrate</h4>
 
           <form asp-controller="Home" asp-action="Enviar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="container h-100">
+
               <div class="form-group">
                 <label asp-for="nombre"></label>
-                <input type="text" asp-for="nombre" class="form-control">
+                <input type="text" asp-for="nombre" class="form-control" placeholder="Ingrese nombres completos">
               </div>
               <div class="form-group">
                 <label asp-for="apellido"></label>
-                <input type="text" asp-for="apellido" class="form-control">
+                <input type="text" asp-for="apellido" class="form-control" placeholder="Ingrese apellidos completos">
+              </div>              
+              <div class="form-group">
+                <label asp-for="dni"></label>
+                <input type="text" asp-for="dni" class="form-control" placeholder="Ingrese número de documento de identidad">
               </div>              
               <div class="form-group">
                 <label asp-for="celular"></label>
-                <input type="text" asp-for="celular" class="form-control">
+                <input type="text" asp-for="celular" class="form-control" placeholder="Ingrese un número de contacto">
               </div>
               <div class="form-group">
                 <label asp-for="email"></label>
-                <input type="text" asp-for="email" class="form-control">
+                <input type="email" asp-for="email" class="form-control" placeholder="Ingrese dirección de correo electrónico">
               </div>
               <div class="form-group">
                 <label asp-for="password"></label>
-                <input type="text" asp-for="password" class="form-control">
+                <input type="password" asp-for="password" class="form-control" placeholder="Ingrese nueva contraseña">
               </div>
-              <div class="form-group">
-                <label asp-for="dni"></label>
-                <input type="text" asp-for="dni" class="form-control">
-              </div>
-            
+                          
                   <div class="d-flex justify-content-center mt-3 login_container">
-                    <button type="button" name="button" class="btn login_btn" style="margin-top: 20px;">Login</button>
+                    <button type="submit" name="button" class="btn login_btn" style="margin-top: 20px;">Login</button>
                   </div>
             </div>
           </form>
-          <br/>
-          <td>@Html.DisplayTextFor(model => model.Respuesta)</td>  
-
+          
         </div>
       </div>
     </div>

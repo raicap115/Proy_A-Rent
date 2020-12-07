@@ -32,10 +32,9 @@ namespace Proy_A_Rent.Controllers
 
          public IActionResult Enviar(Usuario objFormulario)
         {
-                objFormulario.Respuesta = "HEMOS PROCESADO SU SOLICITUD";
                 _context.Add(objFormulario);
                 _context.SaveChanges();
-                return View("SingUp", objFormulario);
+                return RedirectToAction("RegistroConfirmacion");
         }
         public IActionResult RegistroConfirmacion()
         {
@@ -45,11 +44,8 @@ namespace Proy_A_Rent.Controllers
         public IActionResult Login()
         {
             return View();
-        }
-
-     
+        }  
         
-
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

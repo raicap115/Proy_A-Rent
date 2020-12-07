@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 namespace Proy_A_Rent.Models
@@ -9,34 +10,28 @@ namespace Proy_A_Rent.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
     
-        [Required]
-        [Display(Name="Nombre completo")]
+        [Required(ErrorMessage="Por favor, Ingrese nombre completo")]
+        [Display(Name="Nombres")]
         public string nombre { get; set; }
 
-        [Required]
-        [Display(Name="Apellido completo")]
+        [Required(ErrorMessage="Por favor, Ingrese apellidos completos")]
+        [Display(Name="Apellidos")]
         public string apellido { get; set; }
-    
-        [Required]
-        [StringLength(9)]
-        [RegularExpression(@"[0-9]{9}", ErrorMessage = "No es un número de teléfono válido")]
+           
+        [Required(ErrorMessage="Ingrese un celular de contacto")]
         [Display(Name="Ingrese número de celular")]
         public string celular { get; set; }
 
-        [Required]
-        [EmailAddress]
-        [Display(Name="Ingrese dirección de correo electrónico")]
+        [Required(ErrorMessage="Ingrese un email")]
+        [Display(Name="Correo Electrónico")]
         public string email { get; set; }
     
-        [Required]
-        [Display(Name="Ingrese una nueva contraseña")]
+        [Required(ErrorMessage="Ingrese una contraseña")]
+        [Display(Name="Contraseña")]
         public string password { get; set; }        
 
-        [Required]
-        [Display(Name="Ingrese número de DNI")]
+        [Required(ErrorMessage="Ingrese un número de documento")]
+        [Display(Name="Documento de identidad")]
         public string dni { get; set; }
-
-        [NotMapped]
-        public String Respuesta { get; set; }
     }
 }
