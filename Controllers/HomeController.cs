@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Proy_A_Rent.Models;
 using Proy_A_Rent.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Proy_A_Rent.Controllers
 {
     public class HomeController : Controller
@@ -28,21 +30,13 @@ namespace Proy_A_Rent.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult SingUp(Usuario u)
+         public IActionResult Enviar(Usuario objFormulario)
         {
-            if(ModelState.IsValid){
-
-                _context.Add(u);
+                objFormulario.Respuesta = "HEMOS PROCESADO SU SOLICITUD";
+                _context.Add(objFormulario);
                 _context.SaveChanges();
-
-                // Guardar en BD
-                return RedirectToAction("RegistroConfirmacion");
-            }
-            return View("Home",u);
-                        
+                return View("SingUp", objFormulario);
         }
-
         public IActionResult RegistroConfirmacion()
         {
             return View();
