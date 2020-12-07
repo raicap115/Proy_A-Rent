@@ -1,7 +1,7 @@
 @{
     ViewData["Title"] = "SingUp";
 }
-@model Proy_A_Rent.Models.Usuario
+@model Usuario
 
 @{
     Layout="_Layout_LogSing";
@@ -18,31 +18,31 @@
 				  </div>
           <h4 style="text-align: center; margin-top: 95px;">Regístrate</h4>
 
-          <form asp-controller="Home" asp-action="SingUp">
+          <form asp-controller="Home" asp-action="Enviar">
             <div class="container h-100">
               <div class="form-group">
                 <label asp-for="nombre"></label>
-                <input type="text" asp-for="nombre" class="form-control" placeholder="Nombres">
+                <input type="text" asp-for="nombre" class="form-control">
               </div>
               <div class="form-group">
                 <label asp-for="apellido"></label>
-                <input type="text" asp-for="apellido" class="form-control" placeholder="Apellidos">
-              </div>
-              <div class="form-group">
-                <label asp-for="dni"></label>
-                <input type="text" asp-for="dni" class="form-control" placeholder="Documento de identidad">
-              </div>
+                <input type="text" asp-for="apellido" class="form-control">
+              </div>              
               <div class="form-group">
                 <label asp-for="celular"></label>
-                <input type="text" asp-for="celular" class="form-control" placeholder="Celular">
+                <input type="text" asp-for="celular" class="form-control">
               </div>
               <div class="form-group">
                 <label asp-for="email"></label>
-                <input type="text" asp-for="email" class="form-control" placeholder="Correo">
+                <input type="text" asp-for="email" class="form-control">
               </div>
               <div class="form-group">
                 <label asp-for="password"></label>
-                <input type="text" asp-for="password" class="form-control" placeholder="Password">
+                <input type="text" asp-for="password" class="form-control">
+              </div>
+              <div class="form-group">
+                <label asp-for="dni"></label>
+                <input type="text" asp-for="dni" class="form-control">
               </div>
             
                   <div class="d-flex justify-content-center mt-3 login_container">
@@ -50,6 +50,9 @@
                   </div>
             </div>
           </form>
+          <br/>
+          <td>@Html.DisplayTextFor(model => model.Respuesta)</td>  
+
         </div>
       </div>
     </div>
