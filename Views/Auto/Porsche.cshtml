@@ -1,11 +1,11 @@
 @{
-    ViewData["Title"] = "Mercedes Benz";
+    ViewData["Title"] = "Porsche";
 }
-<div class="text-center" style="padding-top: 15px;">
+<div class="text-center" style="padding-top: 25px;">
     <img src="~/images/p_logo.png" width="280" height="85">
 </div>
 
-<div class="container">
+<div class="container" style="margin-top: 25px;">
     <form action="" method="post">
     <table>        
        @foreach (var auto in Model)
@@ -13,56 +13,56 @@
         @if (@auto.id==401)
         {
             <tr>
-                <th>@auto.modelo</th>
+                <th colspan="2" style="text-align: center;">@auto.modelo</th>
             </tr> 
             <tr>
                 <td>
-                    <img src="~/images/porsche_panamera.jpg" width="280" height="75">
+                    <img src="~/images/porsche_panamera.jpg" width="216" height="115" style="margin-bottom: 30px;">
                 </td>
                 <td>
-                    <button class="btn btn-primary">Consultar</button>
+                    <button class="btn btn-primary" style="margin-left: 18px;">Consultar</button>
                 </td>
             </tr>             
         }
         @if (@auto.id==402)
         {
             <tr>
-                <th>@auto.modelo</th>
+                <th colspan="2" style="text-align: center;">@auto.modelo</th>
             </tr> 
             <tr>
                 <td>
-                    <img src="~/images/porsche_carrera.jpg" width="280" height="75">
+                    <img src="~/images/porsche_carrera.jpg" width="216" height="115" style="margin-bottom: 30px;">
                 </td>
                 <td>
-                    <button class="btn btn-primary">Consultar</button>
+                    <button class="btn btn-primary" style="margin-left: 18px;">Consultar</button>
                 </td>
             </tr>             
         }
         @if (@auto.id==403)
         {
             <tr>
-                <th>@auto.modelo</th>
+                <th colspan="2" style="text-align: center;">@auto.modelo</th>
             </tr> 
             <tr>
                 <td>
-                    <img src="~/images/porsche_cayennecoupe.jpg" width="280" height="75">
+                    <img src="~/images/porsche_cayennecoupe.jpg" width="216" height="115" style="margin-bottom: 30px;">
                 </td>
                 <td>
-                    <button class="btn btn-primary">Consultar</button>
+                    <button class="btn btn-primary" style="margin-left: 18px;">Consultar</button>
                 </td>
             </tr>             
         }
         @if (@auto.id==404)
         {
             <tr>
-                <th>@auto.modelo</th>
+                <th colspan="2" style="text-align: center;">@auto.modelo</th>
             </tr> 
             <tr>
                 <td>
-                    <img src="~/images/porsche_718spyder.jpg" width="280" height="75">
+                    <img src="~/images/porsche_718spyder.jpg" width="216" height="115">
                 </td>
                 <td>
-                    <button class="btn btn-primary">Consultar</button>
+                    <button class="btn btn-primary" style="margin-left: 18px;">Consultar</button>
                 </td>
             </tr>             
         }          
@@ -72,3 +72,4 @@
     </table>
     </form>
 </div>  
+<br><br>
