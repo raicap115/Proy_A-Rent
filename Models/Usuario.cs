@@ -16,10 +16,6 @@ namespace Proy_A_Rent.Models
         [Required]
         [Display(Name="Apellido completo")]
         public string apellido { get; set; }
-
-        [Required]
-        [Display(Name="Ingrese número de DNI")]
-        public string dni { get; set; }
     
         [Required]
         [StringLength(9)]
@@ -34,6 +30,13 @@ namespace Proy_A_Rent.Models
     
         [Required]
         [Display(Name="Ingrese una nueva contraseña")]
-        public string password { get; set; }
+        public string password { get; set; }        
+
+        [Required]
+        [Display(Name="Ingrese número de DNI")]
+        public string dni { get; set; }
+
+        [NotMapped]
+        public String Respuesta { get; set; }
     }
 }
