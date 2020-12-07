@@ -3,42 +3,54 @@
 }
 @model Proy_A_Rent.Models.Usuario
 
+@{
+    Layout="_Layout_LogSing";
+}
 
     
-    <div>
-        <h1 class="display-3">Regístrate</h1>
+    <div class="container h-100">
+		  <div class="d-flex justify-content-center h-100">
+			  <div class="sing_card" style="margin-top: 75px;" >
+          <div class="d-flex justify-content-center">
+					  <div class="brand_logo_container">
+						  <img src="~/images/logo.jpg" class="brand_logo" alt="Logo">
+					  </div>
+				  </div>
+          <h4 style="text-align: center; margin-top: 95px;">Regístrate</h4>
 
-        <form asp-controller="Home" asp-action="SingUp">
-            <div class="form-row">
-              <div class="form-group col-md-6">
+          <form asp-controller="Home" asp-action="SingUp">
+            <div class="container h-100">
+              <div class="form-group">
                 <label asp-for="nombre"></label>
-                <input type="text" asp-for="nombre" class="form-control">
+                <input type="text" asp-for="nombre" class="form-control" placeholder="Nombres">
               </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
+              <div class="form-group">
                 <label asp-for="apellido"></label>
-                <input type="text" asp-for="apellido" class="form-control">
+                <input type="text" asp-for="apellido" class="form-control" placeholder="Apellidos">
               </div>
+              <div class="form-group">
+                <label asp-for="dni"></label>
+                <input type="text" asp-for="dni" class="form-control" placeholder="Documento de identidad">
+              </div>
+              <div class="form-group">
+                <label asp-for="celular"></label>
+                <input type="text" asp-for="celular" class="form-control" placeholder="Celular">
+              </div>
+              <div class="form-group">
+                <label asp-for="email"></label>
+                <input type="text" asp-for="email" class="form-control" placeholder="Correo">
+              </div>
+              <div class="form-group">
+                <label asp-for="password"></label>
+                <input type="text" asp-for="password" class="form-control" placeholder="Password">
+              </div>
+            
+                  <div class="d-flex justify-content-center mt-3 login_container">
+                    <button type="button" name="button" class="btn login_btn" style="margin-top: 20px;">Login</button>
+                  </div>
             </div>
-            <div class="form-group">
-              <label asp-for="dni"></label>
-              <input type="text" asp-for="dni" class="form-control">
-            </div>
-            <div class="form-group">
-              <label asp-for="celular"></label>
-              <input type="text" asp-for="celular" class="form-control">
-            </div>
-            <div class="form-group">
-              <label asp-for="email"></label>
-              <input type="text" asp-for="email" class="form-control">
-            </div>
-            <div class="form-group">
-              <label asp-for="password"></label>
-              <input type="text" asp-for="password" class="form-control">
-            </div>
-
-            <button type="button" class="btn btn-primary">Enviar</button>
           </form>
+        </div>
+      </div>
     </div>
 
