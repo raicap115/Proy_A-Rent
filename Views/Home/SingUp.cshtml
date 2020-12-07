@@ -2,48 +2,50 @@
     ViewData["Title"] = "SingUp";
 }
 
-<body>  
+@model Usuario
+
+
+    <div asp-validation-summary="All"></div>
     <div>
         <h1 class="display-3">Regístrate</h1>
-        <form>
+        <form method="POST">
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="Name">Nombres</label>
-                <input type="text" class="form-control" id="Name" placeholder="Nombres" required> 
+                <label asp-for="nombre"></label>
+                <input type="text" asp-for="nombre" class="form-control">
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="LastN">Apellidos</label>
-                <input type="text" class="form-control" id="LastN" placeholder="Apellidos" required>
+                <label asp-for="apellido"></label>
+                <input type="text" asp-for="apellido" class="form-control">
               </div>
             </div>
             <div class="form-group">
-                Asunto:
-                <select name="asunto" id="" class="form-control">
+                Género:
+                <select name="genero" id="" class="form-control">
                     <option value="1">Masculino</option>
                     <option value="2">Femenino</option>
                 </select>
             </div>
             <div class="form-group">
-              <label for="DNI">N° Documento de Identidad</label>
-              <input type="number" class="form-control" id="DNI" placeholder="DNI">
+              <label asp-for="dni"></label>
+              <input type="text" asp-for="dni" class="form-control">
             </div>
             <div class="form-group">
-              <label for="Cel">Celular</label>
-              <input type="number" class="form-control" id="Cel" placeholder="+51 999 999 999">
+              <<label asp-for="celular"></label>
+              <input type="text" asp-for="celular" class="form-control">
             </div>
             <div class="form-group">
-              <label for="Email">Correo Electronico</label>
-              <input type="email" class="form-control" id="Email" placeholder="Correo Electronico">
+              <label asp-for="email"></label>
+              <input type="text" asp-for="email" class="form-control">
             </div>
             <div class="form-group">
-              <label for="Password">Password</label>
-              <input type="password" class="form-control" id="Pass" placeholder="*********">
+              <label asp-for="password"></label>
+              <input type="text" asp-for="password" class="form-control">
             </div>
 
             <button type="button" class="btn btn-primary">Enviar</button>
           </form>
     </div>
 
-</body>
