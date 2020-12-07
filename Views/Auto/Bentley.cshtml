@@ -5,7 +5,7 @@
     <img src="~/images/bentley_logo.png" width="275" height="123">
 </div>
 
-<div class="container">
+<div class="container" style="margin-top: 25px;">
     <form action="" method="post">
     <table>        
        @foreach (var auto in Model)
@@ -13,56 +13,56 @@
         @if (@auto.id==301)
         {
             <tr>
-                <th>@auto.modelo</th>
+                <th colspan="2" style="text-align: center;">@auto.modelo</th>
             </tr> 
             <tr>
                 <td>
-                    <img src="~/images/bentley_mulsannespeed.jpg" width="280" height="75">
+                    <img src="~/images/bentley_mulsannespeed.jpg" width="216" height="115" style="margin-bottom: 30px;">
                 </td>
                 <td>
-                    <button class="btn btn-primary">Consultar</button>
+                    <button class="btn btn-primary" style="margin-left: 18px;">Consultar</button>
                 </td>
             </tr>             
         }
         @if (@auto.id==302)
         {
             <tr>
-                <th>@auto.modelo</th>
+                <th colspan="2" style="text-align: center;">@auto.modelo</th>
             </tr> 
             <tr>
                 <td>
-                    <img src="~/images/bentley_continentalgt.jpg" width="280" height="75">
+                    <img src="~/images/bentley_continentalgt.jpg" width="216" height="115" style="margin-bottom: 30px;">
                 </td>
                 <td>
-                    <button class="btn btn-primary">Consultar</button>
+                    <button class="btn btn-primary" style="margin-left: 18px;">Consultar</button>
                 </td>
             </tr>             
         }
         @if (@auto.id==303)
         {
             <tr>
-                <th>@auto.modelo</th>
+                <th colspan="2" style="text-align: center;">@auto.modelo</th>
             </tr> 
             <tr>
                 <td>
-                    <img src="~/images/bentley_bentaygaspeed.jpg" width="280" height="75">
+                    <img src="~/images/bentley_bentaygaspeed.jpg" width="216" height="115" style="margin-bottom: 30px;">
                 </td>
                 <td>
-                    <button class="btn btn-primary">Consultar</button>
+                    <button class="btn btn-primary" style="margin-left: 18px;">Consultar</button>
                 </td>
             </tr>             
         }
         @if (@auto.id==304)
         {
             <tr>
-                <th>@auto.modelo</th>
+                <th colspan="2" style="text-align: center;">@auto.modelo</th>
             </tr> 
             <tr>
                 <td>
-                    <img src="~/images/bentley_mullinercoachbuilt.jpg" width="280" height="75">
+                    <img src="~/images/bentley_mullinercoachbuilt.jpg" width="216" height="115">
                 </td>
                 <td>
-                    <button class="btn btn-primary">Consultar</button>
+                    <button class="btn btn-primary" style="margin-left: 18px;">Consultar</button>
                 </td>
             </tr>             
         }          
@@ -72,3 +72,4 @@
     </table>
     </form>
 </div>  
+<br><br>
