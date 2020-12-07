@@ -4,3 +4,71 @@
 <div class="text-center" style="padding-top: 15px;">
     <img src="~/images/p_logo.png" width="280" height="85">
 </div>
+
+<div class="container">
+    <form action="" method="post">
+    <table>        
+       @foreach (var auto in Model)
+       {
+        @if (@auto.id==401)
+        {
+            <tr>
+                <th>@auto.modelo</th>
+            </tr> 
+            <tr>
+                <td>
+                    <img src="~/images/porsche_panamera.jpg" width="280" height="75">
+                </td>
+                <td>
+                    <button class="btn btn-primary">Consultar</button>
+                </td>
+            </tr>             
+        }
+        @if (@auto.id==402)
+        {
+            <tr>
+                <th>@auto.modelo</th>
+            </tr> 
+            <tr>
+                <td>
+                    <img src="~/images/porsche_carrera.jpg" width="280" height="75">
+                </td>
+                <td>
+                    <button class="btn btn-primary">Consultar</button>
+                </td>
+            </tr>             
+        }
+        @if (@auto.id==403)
+        {
+            <tr>
+                <th>@auto.modelo</th>
+            </tr> 
+            <tr>
+                <td>
+                    <img src="~/images/porsche_cayennecoupe.jpg" width="280" height="75">
+                </td>
+                <td>
+                    <button class="btn btn-primary">Consultar</button>
+                </td>
+            </tr>             
+        }
+        @if (@auto.id==404)
+        {
+            <tr>
+                <th>@auto.modelo</th>
+            </tr> 
+            <tr>
+                <td>
+                    <img src="~/images/porsche_718spyder.jpg" width="280" height="75">
+                </td>
+                <td>
+                    <button class="btn btn-primary">Consultar</button>
+                </td>
+            </tr>             
+        }          
+       }        
+        
+
+    </table>
+    </form>
+</div>  

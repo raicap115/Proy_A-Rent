@@ -4,3 +4,71 @@
 <div class="text-center" style="padding-top: 5px;">
     <img src="~/images/bentley_logo.png" width="275" height="123">
 </div>
+
+<div class="container">
+    <form action="" method="post">
+    <table>        
+       @foreach (var auto in Model)
+       {
+        @if (@auto.id==301)
+        {
+            <tr>
+                <th>@auto.modelo</th>
+            </tr> 
+            <tr>
+                <td>
+                    <img src="~/images/bentley_mulsannespeed.jpg" width="280" height="75">
+                </td>
+                <td>
+                    <button class="btn btn-primary">Consultar</button>
+                </td>
+            </tr>             
+        }
+        @if (@auto.id==302)
+        {
+            <tr>
+                <th>@auto.modelo</th>
+            </tr> 
+            <tr>
+                <td>
+                    <img src="~/images/bentley_continentalgt.jpg" width="280" height="75">
+                </td>
+                <td>
+                    <button class="btn btn-primary">Consultar</button>
+                </td>
+            </tr>             
+        }
+        @if (@auto.id==303)
+        {
+            <tr>
+                <th>@auto.modelo</th>
+            </tr> 
+            <tr>
+                <td>
+                    <img src="~/images/bentley_bentaygaspeed.jpg" width="280" height="75">
+                </td>
+                <td>
+                    <button class="btn btn-primary">Consultar</button>
+                </td>
+            </tr>             
+        }
+        @if (@auto.id==304)
+        {
+            <tr>
+                <th>@auto.modelo</th>
+            </tr> 
+            <tr>
+                <td>
+                    <img src="~/images/bentley_mullinercoachbuilt.jpg" width="280" height="75">
+                </td>
+                <td>
+                    <button class="btn btn-primary">Consultar</button>
+                </td>
+            </tr>             
+        }          
+       }        
+        
+
+    </table>
+    </form>
+</div>  

@@ -1,24 +1,76 @@
 @{
     ViewData["Title"] = "Mercedes Benz";
 }
+@model List<Auto>
+
+
 <div class="text-center" style="padding-top: 15px;">
     <img src="~/images/mb_logo.png" width="280" height="75">
 </div>
 
 <div class="container">
     <form action="" method="post">
-    <table>
-        <tr>
-            <th colspan="2"></th>
-        </tr>
-        <tr>
-            <td>
-                <img src="~/images/mb_amga35.jpeg" width="280" height="75">
-            </td>
-            <td>
-                <button class="btn btn-primary">Consultar</button>
-            </td>
-        </tr>
+    <table>        
+       @foreach (var auto in Model)
+       {
+        @if (@auto.id==101)
+        {
+            <tr>
+                <th>@auto.modelo</th>
+            </tr> 
+            <tr>
+                <td>
+                    <img src="~/images/mb_amga35.jpeg" width="280" height="75">
+                </td>
+                <td>
+                    <button class="btn btn-primary">Consultar</button>
+                </td>
+            </tr>             
+        }
+        @if (@auto.id==102)
+        {
+            <tr>
+                <th>@auto.modelo</th>
+            </tr> 
+            <tr>
+                <td>
+                    <img src="~/images/mb_amgc43.jpg" width="280" height="75">
+                </td>
+                <td>
+                    <button class="btn btn-primary">Consultar</button>
+                </td>
+            </tr>             
+        }
+        @if (@auto.id==103)
+        {
+            <tr>
+                <th>@auto.modelo</th>
+            </tr> 
+            <tr>
+                <td>
+                    <img src="~/images/mb_amggle53.jpg" width="280" height="75">
+                </td>
+                <td>
+                    <button class="btn btn-primary">Consultar</button>
+                </td>
+            </tr>             
+        }
+        @if (@auto.id==104)
+        {
+            <tr>
+                <th>@auto.modelo</th>
+            </tr> 
+            <tr>
+                <td>
+                    <img src="~/images/mb_gt.jpg" width="280" height="75">
+                </td>
+                <td>
+                    <button class="btn btn-primary">Consultar</button>
+                </td>
+            </tr>             
+        }          
+       }        
+        
 
     </table>
     </form>

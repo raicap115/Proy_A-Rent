@@ -5,3 +5,71 @@
     <img src="~/images/bmw.png" width="90" height="90">
     <h2 style="text-align: center;">BMW</h2>
 </div>
+
+<div class="container">
+    <form action="" method="post">
+    <table>        
+       @foreach (var auto in Model)
+       {
+        @if (@auto.id==201)
+        {
+            <tr>
+                <th>@auto.modelo</th>
+            </tr> 
+            <tr>
+                <td>
+                    <img src="~/images/bmw_serie1.jpg" width="280" height="75">
+                </td>
+                <td>
+                    <button class="btn btn-primary">Consultar</button>
+                </td>
+            </tr>             
+        }
+        @if (@auto.id==202)
+        {
+            <tr>
+                <th>@auto.modelo</th>
+            </tr> 
+            <tr>
+                <td>
+                    <img src="~/images/bmw_serie2.jpeg" width="280" height="75">
+                </td>
+                <td>
+                    <button class="btn btn-primary">Consultar</button>
+                </td>
+            </tr>             
+        }
+        @if (@auto.id==203)
+        {
+            <tr>
+                <th>@auto.modelo</th>
+            </tr> 
+            <tr>
+                <td>
+                    <img src="~/images/bmw_x6m.jpg" width="280" height="75">
+                </td>
+                <td>
+                    <button class="btn btn-primary">Consultar</button>
+                </td>
+            </tr>             
+        }
+        @if (@auto.id==204)
+        {
+            <tr>
+                <th>@auto.modelo</th>
+            </tr> 
+            <tr>
+                <td>
+                    <img src="~/images/bmw_m4cs.jpg" width="280" height="75">
+                </td>
+                <td>
+                    <button class="btn btn-primary">Consultar</button>
+                </td>
+            </tr>             
+        }          
+       }        
+        
+
+    </table>
+    </form>
+</div>  

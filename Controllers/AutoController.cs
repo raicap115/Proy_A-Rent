@@ -6,27 +6,39 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Proy_A_Rent.Models;
+using Proy_A_Rent.Data;
 
 namespace Proy_A_Rent.Controllers
 {
     public class AutoController : Controller
     {
+
+        private readonly ApplicationDbContext _context;
+
+        public AutoController(ApplicationDbContext db){
+            _context=db;
+        }
+
         public IActionResult MercedesBenz()
         {
-            return View();
+            var lista=_context.Autos.ToList();
+            return View(lista);
         }
 
         public IActionResult BMW()
         {
-            return View();
+            var lista=_context.Autos.ToList();
+            return View(lista);
         }
         public IActionResult Bentley()
         {
-            return View();
+            var lista=_context.Autos.ToList();
+            return View(lista);
         }
         public IActionResult Porsche()
         {
-            return View();
+            var lista=_context.Autos.ToList();
+            return View(lista);
         }
 
 
