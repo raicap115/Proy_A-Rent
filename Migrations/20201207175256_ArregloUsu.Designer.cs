@@ -10,8 +10,8 @@ using Proy_A_Rent.Data;
 namespace Proy_A_Rent.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201207040419_MigracionInicial")]
-    partial class MigracionInicial
+    [Migration("20201207175256_ArregloUsu")]
+    partial class ArregloUsu
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -272,21 +272,27 @@ namespace Proy_A_Rent.Migrations
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("apellido")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("celular")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("dni")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("email")
+                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<char>("genero")
-                        .HasColumnType("character(1)");
-
                     b.Property<string>("nombre")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("password")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("id");

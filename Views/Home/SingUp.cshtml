@@ -1,14 +1,14 @@
 @{
     ViewData["Title"] = "SingUp";
 }
+@model Proy_A_Rent.Models.Usuario
 
-@model Usuario
 
-
-    <div asp-validation-summary="All"></div>
+    
     <div>
         <h1 class="display-3">Regístrate</h1>
-        <form method="POST">
+
+        <form asp-controller="Home" asp-action="SingUp">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label asp-for="nombre"></label>
@@ -22,18 +22,11 @@
               </div>
             </div>
             <div class="form-group">
-                Género:
-                <select name="genero" id="" class="form-control">
-                    <option value="1">Masculino</option>
-                    <option value="2">Femenino</option>
-                </select>
-            </div>
-            <div class="form-group">
               <label asp-for="dni"></label>
               <input type="text" asp-for="dni" class="form-control">
             </div>
             <div class="form-group">
-              <<label asp-for="celular"></label>
+              <label asp-for="celular"></label>
               <input type="text" asp-for="celular" class="form-control">
             </div>
             <div class="form-group">
