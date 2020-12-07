@@ -6,6 +6,7 @@ namespace Proy_A_Rent.Models
     
     public class Usuario
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
     
         [Required]
@@ -15,17 +16,14 @@ namespace Proy_A_Rent.Models
         [Required]
         [Display(Name="Apellido completo")]
         public string apellido { get; set; }
-    
-        [Required]
-        [Display(Name="Género")]
-        public char genero { get; set; }
 
         [Required]
         [Display(Name="Ingrese número de DNI")]
         public string dni { get; set; }
     
         [Required]
-        [DataType(DataType.PhoneNumber)]
+        [StringLength(9)]
+        [RegularExpression(@"[0-9]{9}", ErrorMessage = "No es un número de teléfono válido")]
         [Display(Name="Ingrese número de celular")]
         public string celular { get; set; }
 

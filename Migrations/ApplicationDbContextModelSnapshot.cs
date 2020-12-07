@@ -270,21 +270,27 @@ namespace Proy_A_Rent.Migrations
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("apellido")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("celular")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("dni")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("email")
+                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<char>("genero")
-                        .HasColumnType("character(1)");
-
                     b.Property<string>("nombre")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("password")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("id");
