@@ -39,7 +39,7 @@ namespace Proy_A_Rent.Controllers
                 _context.SaveChanges();
 
                 // Guardar en BD
-                return RedirectToAction("Registro confirmacion");
+                return RedirectToAction("RegistroConfirmacion");
             }
 
             return View("SingUp",objUsuario);
