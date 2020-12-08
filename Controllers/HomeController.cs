@@ -30,11 +30,19 @@ namespace Proy_A_Rent.Controllers
             return View();
         }
 
-         public IActionResult Enviar(Usuario objFormulario)
+        [HttpPost]
+        public IActionResult Enviar(Usuario objUsuario)
         {
-                _context.Add(objFormulario);
+            if (ModelState.IsValid) {
+
+                _context.Add(objUsuario);
                 _context.SaveChanges();
-                return RedirectToAction("RegistroConfirmacion");
+
+                // Guardar en BD
+                return RedirectToAction("Registro confirmacion");
+            }
+
+            return View("SingUp",objUsuario);
         }
         public IActionResult RegistroConfirmacion()
         {
