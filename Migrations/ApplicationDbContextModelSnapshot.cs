@@ -251,13 +251,17 @@ namespace Proy_A_Rent.Migrations
                     b.Property<string>("fecha_rec")
                         .HasColumnType("text");
 
-                    b.Property<string>("id_usuario")
-                        .HasColumnType("text");
+                    b.Property<int?>("id_usuarioid")
+                        .HasColumnType("integer");
 
-                    b.Property<string>("modelo")
-                        .HasColumnType("text");
+                    b.Property<int?>("modeloid")
+                        .HasColumnType("integer");
 
                     b.HasKey("id");
+
+                    b.HasIndex("id_usuarioid");
+
+                    b.HasIndex("modeloid");
 
                     b.ToTable("Bookings");
                 });
@@ -347,6 +351,17 @@ namespace Proy_A_Rent.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Proy_A_Rent.Models.Bookings", b =>
+                {
+                    b.HasOne("Proy_A_Rent.Models.Usuario", "id_usuario")
+                        .WithMany()
+                        .HasForeignKey("id_usuarioid");
+
+                    b.HasOne("Proy_A_Rent.Models.Auto", "modelo")
+                        .WithMany()
+                        .HasForeignKey("modeloid");
                 });
 #pragma warning restore 612, 618
         }

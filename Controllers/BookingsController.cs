@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -6,28 +6,24 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Proy_A_Rent.Models;
+using Proy_A_Rent.Data;
 
 namespace Proy_A_Rent.Controllers
 {
-    public class IndexController : Controller
+    public class BookingsController : Controller
     {
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-       
+        private readonly ApplicationDbContext _context;
 
-        public IActionResult Service()
+        public BookingsController(ApplicationDbContext db)
         {
-            return View();
+            _context=db;
         }
 
-        public IActionResult Nosotros()
-        {
-            return View();
-        }
-
+       public IActionResult Index()
+       {
+           return View();
+       }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
