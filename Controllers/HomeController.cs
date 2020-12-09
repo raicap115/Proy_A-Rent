@@ -25,7 +25,7 @@ namespace Proy_A_Rent.Controllers
             return View();
         }
 
-        public IActionResult SingUp()
+        public IActionResult SignUp()
         {
             return View();
         }
@@ -42,7 +42,7 @@ namespace Proy_A_Rent.Controllers
                 return RedirectToAction("RegistroConfirmacion");
             }
 
-            return View("SingUp",objUsuario);
+            return View("SignUp",objUsuario);
         }
         public IActionResult RegistroConfirmacion()
         {
