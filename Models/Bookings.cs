@@ -6,7 +6,7 @@ namespace Proy_A_Rent.Models
     public class Bookings
     {
 
-        
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
     
         public Auto modelo { get; set; }
