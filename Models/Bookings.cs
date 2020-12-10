@@ -5,15 +5,17 @@ namespace Proy_A_Rent.Models
     
     public class Bookings
     {
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
     
-        public string modelo { get; set; }
+        public Auto modelo { get; set; }
     
         public string fecha_rec { get; set; }
     
         public string fecha_dev { get; set; }
     
-        public string id_usuario { get; set; }
+        public Usuario id_usuario { get; set; }
 
     }
 }
