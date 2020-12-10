@@ -25,6 +25,26 @@ namespace Proy_A_Rent.Controllers
            return View();
        }
 
+       public IActionResult Disponibilidad()
+       {
+           return View();
+       }
+
+       [HttpPost]
+        public IActionResult Consultar(Bookings objBookings)
+        {
+            if (ModelState.IsValid) {
+
+                _context.Add(objBookings);
+                _context.SaveChanges();
+
+                // Guardar en BD
+                return RedirectToAction("RegistroConfirmacion");
+            }
+
+            return View("SignUp",objBookings);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

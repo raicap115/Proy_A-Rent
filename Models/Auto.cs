@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 namespace Proy_A_Rent.Models
 {
     
@@ -11,7 +12,7 @@ namespace Proy_A_Rent.Models
         
         public string marca { get; set; }
 
-        
+        [Display(Name="Modelo del Auto")]
         public string modelo { get; set; }
 
         

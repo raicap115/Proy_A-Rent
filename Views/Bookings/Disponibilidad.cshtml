@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = "Disponibilidad";
+}
+@model Bookings;
+<div class="container">
+    <h1 class="display-4" style="font-weight: bold; margin-top: 30px; text-align: center;">Disponibilidad del Auto</h1>
+</div>
+
+
+<form action="post">
+    <div class="container">
+        <label for="modelo"></label>
+        <strong style="text-align: center;">#</strong>
+    </div>
+
+    <div class="container">
+        <label asp-for="fecha_rec"></label>
+        <input type="date" asp-for="fecha_rec">
+    </div>
+    <div class="container">
+        <label asp-for="fecha_dev"></label>
+        <input type="date" asp-for="fecha_dev">
+    </div>
+
+    <div style="text-align: center;">
+        <button type="submit" class="btn btn-secondary">Consultar</button>
+    </div>
+    <div class="container">
+        <label for="status">Status:</label>
+        <strong style="color: #157D0B;">Available</strong>
+    </div>
+
+    <div style="text-align: center;">
+        <button type="submit" class="btn btn-dark">Rentar</button>
+    </div>
+</form>
