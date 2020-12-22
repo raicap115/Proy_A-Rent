@@ -31,7 +31,7 @@ namespace Proy_A_Rent.Controllers
         }
 
         [HttpPost]
-        public IActionResult Enviar(Usuario objUsuario)
+        public IActionResult SignUp(Usuario objUsuario)
         {
             if (ModelState.IsValid) {
 

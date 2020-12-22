@@ -25,24 +25,23 @@ namespace Proy_A_Rent.Controllers
            return View();
        }
 
-       public IActionResult Disponibilidad()
-       {
+       public IActionResult Disponibilidad(){
            return View();
        }
 
        [HttpPost]
         public IActionResult Consultar(Bookings objBookings)
         {
-            if (ModelState.IsValid) {
-
-                _context.Add(objBookings);
-                _context.SaveChanges();
-
-                // Guardar en BD
-                return RedirectToAction("RegistroConfirmacion");
+            var rpt= "Unavailable";
+            var cantidad=Convert.ToInt32(objBookings.cant_auto);            
+            
+            if (cantidad>0) {                
+                rpt = "Available";
+                cantidad--;                
             }
 
-            return View("SignUp",objBookings);
+            objBookings.respuesta = rpt;
+            return View("Disponibilidad",rpt);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

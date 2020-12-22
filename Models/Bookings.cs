@@ -20,5 +20,10 @@ namespace Proy_A_Rent.Models
     
         public Usuario id_usuario { get; set; }
 
+        public Auto cant_auto {get;set;}
+
+        [Display(Name="Status")]
+        [NotMapped]
+         public string respuesta { get; set; }
     }
 }

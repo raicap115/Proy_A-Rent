@@ -10,8 +10,8 @@ using Proy_A_Rent.Data;
 namespace Proy_A_Rent.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201209180033_BookingsMigration")]
-    partial class BookingsMigration
+    [Migration("20201210050426_TuHijito")]
+    partial class TuHijito
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -247,6 +247,9 @@ namespace Proy_A_Rent.Migrations
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
+                    b.Property<int?>("cant_autoid")
+                        .HasColumnType("integer");
+
                     b.Property<string>("fecha_dev")
                         .HasColumnType("text");
 
@@ -260,6 +263,8 @@ namespace Proy_A_Rent.Migrations
                         .HasColumnType("integer");
 
                     b.HasKey("id");
+
+                    b.HasIndex("cant_autoid");
 
                     b.HasIndex("id_usuarioid");
 
@@ -357,6 +362,10 @@ namespace Proy_A_Rent.Migrations
 
             modelBuilder.Entity("Proy_A_Rent.Models.Bookings", b =>
                 {
+                    b.HasOne("Proy_A_Rent.Models.Auto", "cant_auto")
+                        .WithMany()
+                        .HasForeignKey("cant_autoid");
+
                     b.HasOne("Proy_A_Rent.Models.Usuario", "id_usuario")
                         .WithMany()
                         .HasForeignKey("id_usuarioid");
