@@ -10,7 +10,7 @@ namespace Proy_A_Rent.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
     
-        public Auto modelo { get; set; }
+        public string modelo_auto { get; set; }
     
         [Display(Name="Fecha de recogida")]
         public string fecha_rec { get; set; }
@@ -18,9 +18,9 @@ namespace Proy_A_Rent.Models
         [Display(Name="Fecha de devolución")]
         public string fecha_dev { get; set; }
     
-        public Usuario id_usuario { get; set; }
+        public int id_usuario { get; set; }
 
-        public Auto cant_auto {get;set;}
+        public int cant_auto {get;set;}
 
         [Display(Name="Status")]
         [NotMapped]
