@@ -1,6 +1,7 @@
 @{
     ViewData["Title"] = "My Bookings";
 }
+@model List<Bookings>
 <div class="container">
     <h1 class="display-4" style="font-weight: bold; margin-top: 30px; text-align: center;">My Bookings</h1>
 </div>
@@ -13,6 +14,15 @@
                 <th class="text-center col-xs-3">FECHA RECOGIDA</th>
                 <th class="text-center col-xs-3">FECHA DEVOLUCIÓN</th>
             </tr>
+            @foreach (var booking in Model)
+            {
+                <tr>
+                <td>@booking.id</td>
+                <td>@booking.modelo_auto</td>
+                <td>@booking.fecha_rec</td>
+                <td>@booking.fecha_dev</td>
+                </tr>
+            }
         </table>
     </div>
 </div>

@@ -1,0 +1,54 @@
+@model Auto
+
+ <!-- Modal -->
+<div class="modal fade" id="Detalle" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Detalle de la Factura</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="container h-100">
+                                <form method="post">
+                                    <input type="hidden" asp-for="id"/>
+                                    <div class="form-group">
+                                        <label asp-for="modelo"></label>
+                                        <input type="hidden" class="form-control" value="@Html.DisplayFor(model=>model.modelo)" name="mod">
+                                        <strong>@Html.DisplayFor(model=>model.modelo)</strong>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Fecha de recogida</label>
+                                        <input type="date" name="fec_rec" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Fecha de devolución</label>
+                                        <input type="date" name="fec_dev" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="hidden" name="id_usu" class="form-control" value="3">
+                                    </div>
+                                        
+                                    <div>
+                                        <button type="submit" asp-action="Consultar" asp-controller="Auto">Consultar</button>
+                                    </div>
+                                    <td>@Html.DisplayTextFor(model => model.respuesta)</td>    
+                                    <div>
+                                        <button type="submit" asp-controller="Auto" asp-action="Reserva">Reservar</button>
+                                    </div>
+                                </form>
+                            </div>
+
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>                            
+                        </div>
+        </div>
+    </div>
+</div>

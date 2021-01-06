@@ -17,5 +17,10 @@ namespace Proy_A_Rent.Models
 
         
         public int cant { get; set; }
+
+        
+        [Display(Name="Status")]
+        [NotMapped]
+         public string respuesta { get; set; }
     }
 }
