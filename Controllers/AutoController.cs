@@ -41,6 +41,46 @@ namespace Proy_A_Rent.Controllers
             return View(lista);
         }
 
+        public IActionResult Consulta(int id){
+            var consulta = _context.Autos.Where(m => m.id == id).FirstOrDefault();             
+            return PartialView("Consulta",consulta);
+        }
+
+        [HttpPost]
+        public IActionResult Consultar(int id)
+        {
+            Auto objAuto=new Auto();
+            var cantidad = objAuto.cant;
+            
+            var rpt= "Unavailable";    
+            
+            if (cantidad>0) {                
+                rpt = "Available";
+                cantidad--;                
+            }
+
+            objAuto.respuesta = rpt;
+            return PartialView("Consulta",rpt);
+        }
+
+
+
+        [HttpPost]
+        public IActionResult Reserva(string mod, string fec_rec, string fec_dev, int id_usu)
+        {
+            var objBooking= new Bookings();
+            objBooking.modelo_auto=mod;
+            objBooking.fecha_rec=fec_rec;
+            objBooking.fecha_dev=fec_dev;
+            objBooking.id_usuario=id_usu;
+
+            _context.Bookings.Add(objBooking);
+            _context.SaveChanges();
+            
+            return RedirectToAction("Index","Bookings");
+        }
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

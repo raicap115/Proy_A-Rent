@@ -22,27 +22,11 @@ namespace Proy_A_Rent.Controllers
 
        public IActionResult Index()
        {
-           return View();
+           var lista=_context.Bookings.ToList();
+            return View(lista);
        }
 
-       public IActionResult Disponibilidad(){
-           return View();
-       }
-
-       [HttpPost]
-        public IActionResult Consultar(Bookings objBookings)
-        {
-            var rpt= "Unavailable";
-            var cantidad=Convert.ToInt32(objBookings.cant_auto);            
-            
-            if (cantidad>0) {                
-                rpt = "Available";
-                cantidad--;                
-            }
-
-            objBookings.respuesta = rpt;
-            return View("Disponibilidad",rpt);
-        }
+       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

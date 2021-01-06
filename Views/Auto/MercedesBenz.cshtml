@@ -5,6 +5,7 @@
 @model List<Auto>
 
 
+<div id="PlaceHolderHere"></div>
 <div style="margin-top: 15px;">
     <ul class="nav nav-tabs dark">
         <li class="nav-item">
@@ -28,22 +29,100 @@
 </div>
 
 <div class="container" style="margin-top: 25px; padding-bottom: 41px;">
-    <form action="" method="post">
 
         <div>
             @foreach (var auto in Model)
             {
                  
-                @if (@auto.marca=="Mercedes Benz")
-                {
-                    <div>@auto.modelo</div>
-                }
+                @if (@auto.id==101)
+            {
+                <table style="margin-bottom: 25px;">
+                    <thead>
+                        <tr>
+                            <th colspan="2" style="text-align: center;">@auto.modelo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="~/images/mb_amga35.jpeg"  width="216" height="115">
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-dark" style="margin-left: 15px;"  data-toggle="ajax-modal" data-target="#Consulta" data-url="@Url.Action($"Consulta/{auto.id}")">Consultar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
+            @if (@auto.id==102)
+            {
+                <table style="margin-bottom: 25px;">
+                    <thead>
+                        <tr>
+                            <th colspan="2" style="text-align: center;">@auto.modelo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="~/images/mb_amgc43.jpg" width="216" height="115">
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-dark" style="margin-left: 15px;"  data-toggle="ajax-modal" data-target="#Consulta" data-url="@Url.Action($"Consulta/{auto.id}")">Consultar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>             
+            }
+            @if (@auto.id==103)
+            {
+                <table style="margin-bottom: 25px;">
+                    <thead>
+                        <tr>
+                            <th colspan="2" style="text-align: center;">@auto.modelo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="~/images/mb_amggle53.jpg" width="216" height="115">
+                            </td>
+                            <td>
+                                <a asp-controller="Bookings" asp-action="Disponibilidad"> 
+                                    <button type="button" class="btn btn-dark" style="margin-left: 15px;">Consultar</button>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>             
+            }
+            @if (@auto.id==104)
+            {
+                <table style="margin-bottom: 25px;">
+                    <thead>
+                        <tr>
+                            <th colspan="2" style="text-align: center;">@auto.modelo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="~/images/mb_gt.jpg" width="216" height="115">
+                            </td>
+                            <td>
+                                <a asp-controller="Bookings" asp-action="Disponibilidad"> 
+                                    <button type="button" class="btn btn-dark" style="margin-left: 15px;">Consultar</button>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>             
+            }          
+        
               
-            }    
+        }    
         </div>
 
-
-    </form>
 </div>
 
 <div>
