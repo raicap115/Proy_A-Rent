@@ -1,3 +1,6 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,9 +36,12 @@
         <li class="nav-item" style="margin-left: 20px;">
             <a class="nav-link" asp-controller="Index" asp-action="Index" style="font-weight: 500; color: #161515;">Inicio</a>
         </li>
+        @if (SignInManager.IsSignedIn(User))
+        {
         <li class="nav-item" style="margin-left: 20px;">
             <a class="nav-link" asp-controller="Bookings" asp-action="Index" style="font-weight: 500; color: #161515;">My Bookings</a>
         </li>
+        }
         <li class="nav-item" style="margin-left: 20px;">
             <a class="nav-link" asp-controller="Index" asp-action="Service" style="font-weight: 500; color: #161515;">Service Center</a>
         </li>
