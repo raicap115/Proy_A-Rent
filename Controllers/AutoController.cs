@@ -49,9 +49,9 @@ namespace Proy_A_Rent.Controllers
         [HttpPost]
         public IActionResult Consultar(int id)
         {
-            Auto objAuto=new Auto();
-            var cantidad = objAuto.cant;
-            
+            var objAuto=new Auto();
+            var consulta = _context.Autos.Where(m => m.id == id).FirstOrDefault(); 
+            var cantidad = consulta.cant;          
             var rpt= "Unavailable";    
             
             if (cantidad>0) {                
@@ -60,7 +60,8 @@ namespace Proy_A_Rent.Controllers
             }
 
             objAuto.respuesta = rpt;
-            return PartialView("Consulta",rpt);
+
+            return View("Consulta",consulta);
         }
 
 
