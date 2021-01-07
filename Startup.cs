@@ -53,10 +53,12 @@ namespace Proy_A_Rent
                 app.UseHsts();
             }
             //app.UseHttpsRedirection();
+            
             app.UseStaticFiles();
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
