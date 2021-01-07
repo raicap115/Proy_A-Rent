@@ -42,26 +42,17 @@ namespace Proy_A_Rent.Controllers
         }
 
         public IActionResult Consulta(int id){
-            var consulta = _context.Autos.Where(m => m.id == id).FirstOrDefault();             
-            return PartialView("Consulta",consulta);
-        }
-
-        [HttpPost]
-        public IActionResult Consultar(int id)
-        {
-            var objAuto=new Auto();
-            var consulta = _context.Autos.Where(m => m.id == id).FirstOrDefault(); 
-            var cantidad = consulta.cant;          
+                     
+            Auto objAuto=new Auto();
+            objAuto= _context.Autos.Where(m => m.id == id).FirstOrDefault();
+            var cantidad = objAuto.cant;          
             var rpt= "Unavailable";    
             
             if (cantidad>0) {                
-                rpt = "Available";
-                cantidad--;                
+                rpt = "Available";               
             }
-
             objAuto.respuesta = rpt;
-
-            return View("Consulta",consulta);
+            return PartialView("Consulta",objAuto);
         }
 
 
@@ -70,10 +61,12 @@ namespace Proy_A_Rent.Controllers
         public IActionResult Reserva(string mod, string fec_rec, string fec_dev, int id_usu)
         {
             var objBooking= new Bookings();
+            Auto objAuto=new Auto();
             objBooking.modelo_auto=mod;
             objBooking.fecha_rec=fec_rec;
             objBooking.fecha_dev=fec_dev;
             objBooking.id_usuario=id_usu;
+            objAuto.cant=objAuto.cant-1;
 
             _context.Bookings.Add(objBooking);
             _context.SaveChanges();

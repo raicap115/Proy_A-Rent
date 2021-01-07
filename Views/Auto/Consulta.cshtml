@@ -6,7 +6,7 @@
     <div class="modal-dialog modal-dialog-scrollable" role="document">
         <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Detalle de la Factura</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Disponibilidad del Auto</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>
@@ -21,6 +21,17 @@
                                         <input type="hidden" class="form-control" value="@Html.DisplayFor(model=>model.modelo)" name="mod">
                                         <strong>@Html.DisplayFor(model=>model.modelo)</strong>
                                     </div>
+                                    
+                                    <div style="margin-bottom: 15px;">
+                                        <label>Status : </label>
+                                        @if (@Model.respuesta=="Available")
+                                        {                                            
+                                            <label style="color:green; font-weight: bold;">@Model.respuesta</label>
+                                        }else{
+                                            <label style="color:red; font-weight: bold;">@Model.respuesta</label>
+                                        }    
+                                    </div>    
+
                                     <div class="form-group">
                                         <label>Fecha de recogida</label>
                                         <input type="date" name="fec_rec" class="form-control">
@@ -32,11 +43,6 @@
                                     <div class="form-group">
                                         <input type="hidden" name="id_usu" class="form-control" value="3">
                                     </div>
-                                        
-                                    <div>
-                                        <button type="submit" asp-action="Consultar" asp-controller="Auto">Consultar</button>
-                                    </div>
-                                    <td>@Html.DisplayTextFor(model => model.respuesta)</td>    
                                     <div>
                                         <button type="submit" asp-controller="Auto" asp-action="Reserva">Reservar</button>
                                     </div>
@@ -44,10 +50,6 @@
                             </div>
 
 
-                        </div>
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>                            
                         </div>
         </div>
     </div>
