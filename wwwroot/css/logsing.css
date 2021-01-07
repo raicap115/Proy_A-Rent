@@ -1,5 +1,12 @@
 	/* Coded with love by Mutiullah Samim */
-    body,
+    
+    body {
+        /* Margin bottom by footer height */
+        margin-bottom: 60px;
+        background: url(https://www.xtrafondos.com/wallpapers/ford-gt-2020-5058.jpg) no-repeat center;
+        background-size: cover;  
+      }
+
     html {
         margin: 0;
         padding: 0;
@@ -89,3 +96,4 @@
     .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
         background-color: #eb5757 !important;
     }
+
