@@ -32,6 +32,9 @@ namespace Proy_A_Rent.Models
 
         [Required(ErrorMessage="Ingrese un número de documento")]
         [Display(Name="Documento de identidad")]
+        [StringLength(8, MinimumLength=8, ErrorMessage="Debe ingresar un número minimo de 8 dígitos")]
+        [RegularExpression(@"^([0-9]{8})$", ErrorMessage = "Ingresa un numero valido")]
+
         public string dni { get; set; }
     }
 }

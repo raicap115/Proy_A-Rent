@@ -53,16 +53,12 @@ namespace Proy_A_Rent.Controllers
                 var result = _um.CreateAsync(user, password).Result;
 
                 // Guardar en BD
-                return RedirectToAction("Home");
+                return RedirectToAction("Login");
             }
 
             return View("SignUp",objUsuario);
         }
 
-        public IActionResult RegistroConfirmacion()
-        {
-            return View();
-        }
 
         public IActionResult Login()
         {
@@ -75,7 +71,7 @@ namespace Proy_A_Rent.Controllers
             var result = _sim.PasswordSignInAsync(correo, password, false, false).Result;
 
             if (result.Succeeded) {
-                return RedirectToAction("home", "home");
+                return RedirectToAction("Index", "Index");
             } 
 
             ModelState.AddModelError("", " Email y/o contraseña incorrectos");
