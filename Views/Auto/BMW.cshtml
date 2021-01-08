@@ -37,6 +37,7 @@
     <form action="" method="post">     
        @foreach (var auto in Model)
        {
+           <div class="row">
             @if (@auto.id==201)
             {
                 <div style="padding-top: 11px; padding-left: 6px; padding-bottom: 1px; background-color: #E0E0E0; min-width: 100%; opacity: 70%;">
@@ -232,7 +233,8 @@
                     </tbody>
                 </table>     
                 </div>        
-            }          
+            }
+           </div>          
         }
     </form>
 </div>

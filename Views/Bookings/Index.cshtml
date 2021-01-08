@@ -3,9 +3,9 @@
 }
 @model List<Bookings>
 <div class="container">
-    <h1 class="display-4" style="font-weight: bold; margin-top: 30px; text-align: center;">My Bookings</h1>
+    <h1 class="display-4" style="font-weight: bold; margin-top: 30px; text-align: center; color: #FFFFFF; opacity: 90%; ">My Bookings</h1>
 </div>
-<div style="margin-top: 35px; padding-bottom: 41px;">
+<div style="margin-top: 35px; padding-bottom: 41px; background-color: #FFFFFF;">
     <div class="row">
         <table class="table" style="font-size: x-small;">
             <tr>
@@ -17,10 +17,10 @@
             @foreach (var booking in Model)
             {
                 <tr>
-                <td>@booking.id</td>
-                <td>@booking.modelo_auto</td>
-                <td>@booking.fecha_rec</td>
-                <td>@booking.fecha_dev</td>
+                <td style="text-align: center;">@booking.id</td>
+                <td style="text-align: center;">@booking.modelo_auto</td>
+                <td style="text-align: center;">@booking.fecha_rec</td>
+                <td style="text-align: center;">@booking.fecha_dev</td>
                 </tr>
             }
         </table>
