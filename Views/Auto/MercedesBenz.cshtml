@@ -30,7 +30,7 @@
 </div>
 
 <div class="container" style="text-align: center;">
-    <img src="~/images/mb_logo.png" width="280" height="75" style="margin-top: 30px;">
+    <img src="~/images/mb_logo.png" width="280" height="75" style="margin-top: 30px; margin-bottom: 25px;">
 </div>
 
 <div class="container" style="margin-top: 25px; padding-bottom: 41px;">
@@ -38,20 +38,21 @@
             @foreach (var auto in Model)
             {
                 <div class="row">
-                 <div class="col-lg-4">
+                 
                 @if (@auto.id==101)
             {
-                
+                <div class="col-lg-4">
+              <div style="padding-top: 11px; padding-left: 6px; padding-bottom: 1px; background-color: #E0E0E0; min-width: 100%; opacity: 70%;">  
                 <table style="margin-bottom: 25px;">
                     <thead>
                         <tr>
-                            <th colspan="2" style="text-align: center; color: #FFFFFF;">@auto.modelo</th>
+                            <th colspan="2" style="text-align: center; font-weight: 800;">@auto.modelo</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>
-                                <img src="~/images/mb_amga35.jpeg"  width="216" height="115">
+                                <img src="~/images/mb_amga35.jpeg" width="216" height="115">
                             </td>
                             @if (SignInManager.IsSignedIn(User))
                             { 
@@ -86,17 +87,20 @@
                         </tr>
                     </tbody>
                 </table>
+              </div>
+              </div>
                 
             }
-            </div>
-            <div class="col-lg-4">
+            
+            
             @if (@auto.id==102)
             {
-                
+                <div class="col-lg-4">
+                <div style="padding-top: 11px; padding-left: 6px; padding-bottom: 1px; background-color: #E0E0E0; min-width: 100%; opacity: 70%;">
                 <table style="margin-bottom: 25px;">
                     <thead>
                         <tr>
-                            <th colspan="2" style="text-align: center; color: #FFFFFF;">@auto.modelo</th>
+                            <th colspan="2" style="text-align: center; font-weight: 800;">@auto.modelo</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -137,17 +141,19 @@
                         </tr>
                     </tbody>
                 </table> 
-                           
+                </div>
+                     </div>       
             }
-            </div> 
-            <div class="col-lg-4">
+            
+            
             @if (@auto.id==103)
             {
-                
+                <div class="col-lg-4">
+                <div style="padding-top: 11px; padding-left: 6px; padding-bottom: 1px; background-color: #E0E0E0; min-width: 100%; opacity: 70%;">
                 <table style="margin-bottom: 25px;">
                     <thead>
                         <tr>
-                            <th colspan="2" style="text-align: center; color: #FFFFFF;">@auto.modelo</th>
+                            <th colspan="2" style="text-align: center; font-weight: 800;">@auto.modelo</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -187,18 +193,20 @@
                             }
                         </tr>
                     </tbody>
-                </table> 
-                            
+                </table>
+                </div> 
+                    </div>        
             }
-            </div>
-            <div class="col-lg-4">
+            
+            
             @if (@auto.id==104)
             {
-                
+                <div class="col-lg-4">
+                <div style="padding-top: 11px; padding-left: 6px; padding-bottom: 1px; background-color: #E0E0E0; min-width: 100%; opacity: 70%;">
                 <table style="margin-bottom: 25px;">
                     <thead>
                         <tr>
-                            <th colspan="2" style="text-align: center; color: #FFFFFF;">@auto.modelo</th>
+                            <th colspan="2" style="text-align: center; font-weight: 800;">@auto.modelo</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -239,9 +247,10 @@
                         </tr>
                     </tbody>
                 </table>    
-                        
+                </div>     
+                </div>  
             }  
-            </div>         
+                    
                 </div>
         }
 
@@ -266,4 +275,5 @@
              
        </div>
 </div>
+<p style="text-align: center; color: #FFFFFF; margin-top: 8px;">Developed by <strong>TCTO</strong></p>
 </div>

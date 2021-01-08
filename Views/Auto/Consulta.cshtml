@@ -16,8 +16,8 @@
                             <div class="container h-100">
                                 <form method="post">
                                     <input type="hidden" asp-for="id"/>
-                                    <div class="form-group">
-                                        <label asp-for="modelo"></label>
+                                    <div class="form-group" style="padding-bottom: 10px;">
+                                        <label asp-for="modelo"></label><br>
                                         <input type="hidden" class="form-control" value="@Html.DisplayFor(model=>model.modelo)" name="mod">
                                         <strong>@Html.DisplayFor(model=>model.modelo)</strong>
                                     </div>
