@@ -28,19 +28,19 @@
     </ul>
 </div>
 
-<div class="container" style="text-align: center;">
+<div class="container" style="text-align: center; background-color: #FFFFFF; min-width: 100%; margin-top: 25px; opacity: 95%;">
     <img src="~/images/bmw.png" width="90" height="90" style="margin-top: 30px;">
-    <h2>BMW</h2>
+    <h2 style="padding-bottom: 20px;">BMW</h2>
 </div>
 
-<div class="container" style="margin-top: 25px; padding-bottom: 41px;">
-    <form action="" method="post">     
+<div class="container" style="margin-top: 25px; padding-bottom: 41px;">  
+        <div class="row">
        @foreach (var auto in Model)
        {
-           <div class="row">
+           <div class="col-lg-4" style="margin-top: 15px;">
             @if (@auto.id==201)
             {
-                <div style="padding-top: 11px; padding-left: 6px; padding-bottom: 1px; background-color: #E0E0E0; min-width: 100%; opacity: 70%;">
+                <div style="padding-top: 11px; padding-left: 6px; padding-bottom: 1px; background-color: #E0E0E0; min-width: 100%; opacity: 95%;">
                 <table style="margin-bottom: 25px;">
                     <thead>
                         <tr>
@@ -89,7 +89,7 @@
             }
             @if (@auto.id==202)
             {
-                <div style="padding-top: 11px; padding-left: 6px; padding-bottom: 1px; background-color: #E0E0E0; min-width: 100%; opacity: 70%;">
+                <div style="padding-top: 11px; padding-left: 6px; padding-bottom: 1px; background-color: #E0E0E0; min-width: 100%; opacity: 95%;">
                 <table style="margin-bottom: 25px;">
                     <thead>
                         <tr>
@@ -138,7 +138,7 @@
             }
             @if (@auto.id==203)
             {
-                <div style="padding-top: 11px; padding-left: 6px; padding-bottom: 1px; background-color: #E0E0E0; min-width: 100%; opacity: 70%;">
+                <div style="padding-top: 11px; padding-left: 6px; padding-bottom: 1px; background-color: #E0E0E0; min-width: 100%; opacity: 95%;">
                 <table style="margin-bottom: 25px;">
                     <thead>
                         <tr>
@@ -187,7 +187,7 @@
             }
             @if (@auto.id==204)
             {
-                <div style="padding-top: 11px; padding-left: 6px; padding-bottom: 1px; background-color: #E0E0E0; min-width: 100%; opacity: 70%;">
+                <div style="padding-top: 11px; padding-left: 6px; padding-bottom: 1px; background-color: #E0E0E0; min-width: 100%; opacity: 95%;">
                 <table style="margin-bottom: 25px;">
                     <thead>
                         <tr>
@@ -232,11 +232,12 @@
                         </tr>
                     </tbody>
                 </table>     
-                </div>        
+                </div> 
+                break;       
             }
-           </div>          
+           </div>   
         }
-    </form>
+        </div>
 </div>
 
 <div class="row">
