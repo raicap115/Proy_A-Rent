@@ -13,10 +13,11 @@
         </div>
 
         
-        <div style="text-align: center; margin-top: 15px;">            
-            <a class="menu-btn" asp-area="Identity" asp-page="/Account/Login">Let's start</a>
+        <div style="text-align: center; margin-top: 15px;">
+            <a asp-controller="Home" asp-action="Login"> 
+            <button type="button" class="btn btn-secondary">Let's start</button>
+            </a>
         </div>
-        
 
         <div style="text-align: center; margin-top: 15px;">
             <a asp-controller="Index" asp-action="Index">Continuar como invitado</a>
