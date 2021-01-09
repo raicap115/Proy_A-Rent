@@ -21,7 +21,8 @@ namespace Proy_A_Rent.Controllers
 
         public IActionResult MercedesBenz()
         {
-            return View();
+            var lista=_context.Autos.ToList();
+            return View(lista);
         }
 
         public IActionResult BMW()
