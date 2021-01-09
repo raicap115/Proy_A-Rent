@@ -23,12 +23,12 @@ namespace Proy_A_Rent.Controllers
         public IActionResult Index()
         {
             if (User.Identity.IsAuthenticated){
-            Usuario objUsuario=new Usuario();
-            objUsuario= _context.Usuarios.Where(m => m.email == User.Identity.Name).FirstOrDefault();
-            var nomUsu=objUsuario.nombre;
-            objUsuario.nom_usuario=nomUsu;
+                Usuario objUsuario=new Usuario();
+                objUsuario= _context.Usuarios.Where(m => m.email == User.Identity.Name).FirstOrDefault();
+                var nomUsu=objUsuario.nombre;
+                objUsuario.nom_usuario=nomUsu;
 
-            return View("Index",objUsuario);
+                return View("Index",objUsuario);
             }
             return View();
         }
