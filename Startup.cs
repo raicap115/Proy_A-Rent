@@ -33,8 +33,9 @@ namespace Proy_A_Rent
                     Configuration.GetConnectionString("PostgressConnection")));
 
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                    .AddEntityFrameworkStores<ApplicationDbContext>()
+                    .AddDefaultTokenProviders();
             services.AddControllersWithViews();
            services.AddRazorPages();
         }
