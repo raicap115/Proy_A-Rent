@@ -21,8 +21,7 @@ namespace Proy_A_Rent.Controllers
 
         public IActionResult MercedesBenz()
         {
-            var lista=_context.Autos.ToList();
-            return View(lista);
+            return View();
         }
 
         public IActionResult BMW()
@@ -58,10 +57,16 @@ namespace Proy_A_Rent.Controllers
 
 
         [HttpPost]
-        public IActionResult Reserva(string mod, string fec_rec, string fec_dev, int id_usu)
+        public IActionResult Reserva(string mod, string fec_rec, string fec_dev)
         {
+            if (User.Identity.IsAuthenticated){
+            Usuario objUsuario=new Usuario();
+            objUsuario= _context.Usuarios.Where(m => m.email == User.Identity.Name).FirstOrDefault();
+            var id_usu=objUsuario.id;
+            
             var objBooking= new Bookings();
             Auto objAuto=new Auto();
+
             objBooking.modelo_auto=mod;
             objBooking.fecha_rec=fec_rec;
             objBooking.fecha_dev=fec_dev;
@@ -72,6 +77,9 @@ namespace Proy_A_Rent.Controllers
             _context.SaveChanges();
             
             return View("Confirmation");
+            }else{
+                return RedirectToAction("Home","Home");
+            }
         }
 
         public IActionResult Confirmation()

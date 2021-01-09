@@ -21,6 +21,9 @@ namespace Proy_A_Rent.Models
         public int id_usuario { get; set; }
 
         public int cant_auto {get;set;}
+        
+        [NotMapped]
+         public string display { get; set; }
 
     }
 }
