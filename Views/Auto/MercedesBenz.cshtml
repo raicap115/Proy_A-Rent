@@ -37,10 +37,11 @@
     <div class="row">
             @foreach (var auto in Model)
             {        
-                <div class="col-lg-4" style="margin-top: 15px;">
+                
                 @if (@auto.id==101)
-            {               
-              <div style="padding-top: 11px; padding-left: 6px; padding-bottom: 1px; background-color: #E0E0E0; min-width: 100%; opacity: 95%;">  
+            {       
+                <div style="margin-top: 15px; margin-right: 25px;">        
+              <div style="padding-top: 11px; padding-left: 6px; padding-right: 4px; padding-bottom: 1px; background-color: #E0E0E0; max-width: 100%; opacity: 95%;">  
                 <table style="margin-bottom: 25px;">
                     <thead>
                         <tr>
@@ -85,12 +86,14 @@
                         </tr>
                     </tbody>
                 </table>
-              </div>               
+              </div> 
+              </div>              
             }
             @if (@auto.id==102)
             {
+                <div style="margin-top: 15px; margin-right: 25px;">
                 
-                <div style="padding-top: 11px; padding-left: 6px; padding-bottom: 1px; background-color: #E0E0E0; min-width: 100%; opacity: 95%;">
+                <div style="padding-top: 11px; padding-left: 6px; padding-right: 4px; padding-bottom: 1px; background-color: #E0E0E0; max-width: 100%; opacity: 95%;">
                 <table style="margin-bottom: 25px;">
                     <thead>
                         <tr>
@@ -136,11 +139,13 @@
                     </tbody>
                 </table> 
                 </div> 
+                </div>
             }
             @if (@auto.id==103)
             {
+                <div style="margin-top: 15px; margin-right: 25px;">
                 
-                <div style="padding-top: 11px; padding-left: 6px; padding-bottom: 1px; background-color: #E0E0E0; min-width: 100%; opacity: 95%;">
+               <div style="padding-top: 11px; padding-left: 6px; padding-right: 4px; padding-bottom: 1px; background-color: #E0E0E0; max-width: 100%; opacity: 95%;">
                 <table style="margin-bottom: 25px; width: 100%;">
                     <thead>
                         <tr>
@@ -186,11 +191,13 @@
                     </tbody>
                 </table>
                 </div> 
+                </div>
             }  
             @if (@auto.id==104)
             {
+                <div style="margin-top: 15px; margin-right: 25px;">
                 
-                <div style="padding-top: 11px; padding-left: 6px; padding-bottom: 1px; background-color: #E0E0E0; min-width: 100%; opacity: 95%;">
+               <div style="padding-top: 11px; padding-left: 6px; padding-right: 4px; padding-bottom: 1px; background-color: #E0E0E0; max-width: 100%; opacity: 95%;">
                 <table style="margin-bottom: 25px;">
                     <thead>
                         <tr>
@@ -236,8 +243,212 @@
                     </tbody>
                 </table>    
                 </div> 
+                </div>
             }  
-            </div>
+            @if (@auto.id==105)
+            {
+                <div style="margin-top: 15px; margin-right: 25px;">
+               <div style="padding-top: 11px; padding-left: 6px; padding-right: 4px; padding-bottom: 1px; background-color: #E0E0E0; max-width: 100%; opacity: 95%;">
+                <table style="margin-bottom: 25px;">
+                    <thead>
+                        <tr>
+                            <th colspan="2" style="text-align: center; font-weight: 800;">@auto.modelo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="~/images/MB-SLC.jfif" width="216" height="115">
+                            </td>
+                            @if (SignInManager.IsSignedIn(User))
+                            { 
+                            <td>
+                                <button type="button" class="btn btn-dark" style="margin-left: 15px;"  data-toggle="ajax-modal" data-target="#Consulta" data-url="@Url.Action($"Consulta/{auto.id}")">Consultar</button>
+                            </td>
+                            }else{
+                            <td>
+                                <button type="button" class="btn btn-dark" style="margin-left: 15px;" data-toggle="modal" data-target="#Consultar">
+                                    Consultar
+                                </button>
+                                <div class="modal fade" id="Consultar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Inicie sesión para continuar</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <a class="nav-link" href="~/Home/Login" style="font-weight: 500; color: #161515;">
+                                        <button type="button" class="btn btn-primary">Iniciar sesión</button>
+                                        </a>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </td>        
+                            }
+                        </tr>
+                    </tbody>
+                </table>    
+                </div> 
+                </div>
+            }  
+            @if (@auto.id==106)
+            {
+                <div style="margin-top: 15px; margin-right: 25px;">
+                <div style="padding-top: 11px; padding-left: 6px; padding-right: 4px; padding-bottom: 1px; background-color: #E0E0E0; max-width: 100%; opacity: 95%;">
+                <table style="margin-bottom: 25px;">
+                    <thead>
+                        <tr>
+                            <th colspan="2" style="text-align: center; font-weight: 800;">@auto.modelo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="~/images/MB-SL.jpg" width="216" height="115">
+                            </td>
+                            @if (SignInManager.IsSignedIn(User))
+                            { 
+                            <td>
+                                <button type="button" class="btn btn-dark" style="margin-left: 15px;"  data-toggle="ajax-modal" data-target="#Consulta" data-url="@Url.Action($"Consulta/{auto.id}")">Consultar</button>
+                            </td>
+                            }else{
+                            <td>
+                                <button type="button" class="btn btn-dark" style="margin-left: 15px;" data-toggle="modal" data-target="#Consultar">
+                                    Consultar
+                                </button>
+                                <div class="modal fade" id="Consultar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Inicie sesión para continuar</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <a class="nav-link" href="~/Home/Login" style="font-weight: 500; color: #161515;">
+                                        <button type="button" class="btn btn-primary">Iniciar sesión</button>
+                                        </a>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </td>        
+                            }
+                        </tr>
+                    </tbody>
+                </table>    
+                </div> 
+                </div>
+            }  
+            @if (@auto.id==107)
+            {
+                <div style="margin-top: 15px; margin-right: 25px;">
+                <div style="padding-top: 11px; padding-left: 6px; padding-right: 4px; padding-bottom: 1px; background-color: #E0E0E0; max-width: 100%; opacity: 95%;">
+                <table style="margin-bottom: 25px;">
+                    <thead>
+                        <tr>
+                            <th colspan="2" style="text-align: center; font-weight: 800;">@auto.modelo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="~/images/MB-GLA2020.jpg" width="216" height="115">
+                            </td>
+                            @if (SignInManager.IsSignedIn(User))
+                            { 
+                            <td>
+                                <button type="button" class="btn btn-dark" style="margin-left: 15px;"  data-toggle="ajax-modal" data-target="#Consulta" data-url="@Url.Action($"Consulta/{auto.id}")">Consultar</button>
+                            </td>
+                            }else{
+                            <td>
+                                <button type="button" class="btn btn-dark" style="margin-left: 15px;" data-toggle="modal" data-target="#Consultar">
+                                    Consultar
+                                </button>
+                                <div class="modal fade" id="Consultar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Inicie sesión para continuar</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <a class="nav-link" href="~/Home/Login" style="font-weight: 500; color: #161515;">
+                                        <button type="button" class="btn btn-primary">Iniciar sesión</button>
+                                        </a>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </td>        
+                            }
+                        </tr>
+                    </tbody>
+                </table>    
+                </div> 
+                </div>
+            }  
+            @if (@auto.id==108)
+            {
+                <div style="margin-top: 15px; margin-right: 25px;">
+                <div style="padding-top: 11px; padding-left: 6px; padding-right: 4px; padding-bottom: 1px; background-color: #E0E0E0; max-width: 100%; opacity: 95%;">
+                <table style="margin-bottom: 25px;">
+                    <thead>
+                        <tr>
+                            <th colspan="2" style="text-align: center; font-weight: 800;">@auto.modelo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="~/images/MB-G.jpg" width="216" height="115">
+                            </td>
+                            @if (SignInManager.IsSignedIn(User))
+                            { 
+                            <td>
+                                <button type="button" class="btn btn-dark" style="margin-left: 15px;"  data-toggle="ajax-modal" data-target="#Consulta" data-url="@Url.Action($"Consulta/{auto.id}")">Consultar</button>
+                            </td>
+                            }else{
+                            <td>
+                                <button type="button" class="btn btn-dark" style="margin-left: 15px;" data-toggle="modal" data-target="#Consultar">
+                                    Consultar
+                                </button>
+                                <div class="modal fade" id="Consultar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Inicie sesión para continuar</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <a class="nav-link" href="~/Home/Login" style="font-weight: 500; color: #161515;">
+                                        <button type="button" class="btn btn-primary">Iniciar sesión</button>
+                                        </a>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </td>        
+                            }
+                        </tr>
+                    </tbody>
+                </table>    
+                </div> 
+                </div>
+            }  
         }
         </div>
 </div>
