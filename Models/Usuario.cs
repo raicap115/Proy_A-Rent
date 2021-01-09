@@ -36,5 +36,8 @@ namespace Proy_A_Rent.Models
         [RegularExpression(@"^([0-9]{8})$", ErrorMessage = "Ingresa un numero valido")]
 
         public string dni { get; set; }
+
+        [NotMapped]
+         public string nom_usuario { get; set; }
     }
 }
